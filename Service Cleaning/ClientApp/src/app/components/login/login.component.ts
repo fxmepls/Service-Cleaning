@@ -34,6 +34,9 @@ export class LoginComponent implements OnInit {
         Validators.pattern(/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}/)]) //минимальная длина 8, буквы и цифры, знаки
 
     })
+    if(this.authService.isLoggedIn()) {
+      this.router.navigate(['admin']) //перенаправляет на страницу админа
+    }
 
   }
 

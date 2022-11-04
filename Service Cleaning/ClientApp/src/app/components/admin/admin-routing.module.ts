@@ -10,7 +10,10 @@ const routes: Routes = [
     children: [
       {path: 'contacts', component: ContactComponent},
       {path: 'contacts/user/:id', component: ContactDetailsComponent},
+      {path: 'contacts/user', redirectTo: 'contacts', pathMatch: 'full'},
       {path: 'home', component: HomeComponent},
+      {path: '', redirectTo: 'home', pathMatch: 'full'},
+
     ]
 }
 ];

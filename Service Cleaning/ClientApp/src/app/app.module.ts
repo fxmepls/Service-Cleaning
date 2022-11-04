@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LoginComponent } from './components/login/login.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { AuthGuard } from './guards/auth.guard';
 
 
 const routes: Routes = [
@@ -15,7 +16,9 @@ const routes: Routes = [
   {path: '', redirectTo: '/login', pathMatch: 'full'},
   {
     path: 'admin',
-    loadChildren: () => import('./components/admin/admin.module').then((m) => m.AdminModule)
+    canActivate: [AuthGuard], //запрещает переходить на страницу логина  или админа
+    canDeactivate: [AuthGuard],
+    loadChildren: () => import('./components/admin/admin.module').then((m) => m.AdminModule) //импортирует детей admin
   },
   {path: '**', component: NotFoundComponent},
 ];

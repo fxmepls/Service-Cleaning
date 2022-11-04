@@ -8,9 +8,9 @@ import { Observable, of, throwError } from 'rxjs';
 export class AuthService {
    /**
     * 
-    * @param route 
+    * @param router
     */
-  constructor(private route: Router) { 
+  constructor(private router: Router) { 
 
   }
 /**
@@ -44,5 +44,9 @@ export class AuthService {
       return of(true)
     }
     return throwError(() => new Error('Failed login'))
+  }
+
+  logout(){
+    this.router.navigate(['login'])
   }
 }
