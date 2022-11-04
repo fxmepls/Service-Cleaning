@@ -1,0 +1,20 @@
+
+@import '~bootstrap/dist/css/bootstrap.min.css';
+.gradient-custom {
+  background: #6a11cb;
+  background: -webkit-linear-gradient( to right, rgb(79, 26, 116), rgb(32, 156, 149) );
+  background: linear-gradient( to right, rgb(74, 26, 88), rgb(34, 11, 91) );
+}
+
+.text-info:hover {
+  background: rgba(118, 150, 155, 0.18);
+}
+
+.text-info:active {
+  background: rgba(100, 149, 237, 0.35);
+  transform: scale(0.95);
+}
+
+.active {
+  background: rgba(59, 70, 138, 0.35);
+}
