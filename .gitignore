@@ -24,7 +24,7 @@ Bin/
 obj/
 Obj/
 
-.angular/cache
+.angular/
 
 # Visual Studio 2015 cache/options directory
 .vs/
