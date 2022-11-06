@@ -1,10 +1,13 @@
 
 @import '~bootstrap/dist/css/bootstrap.min.css';
-.gradient-custom {
+
+body {
   background: #6a11cb;
   background: -webkit-linear-gradient( to right, rgb(79, 26, 116), rgb(32, 156, 149) );
-  background: linear-gradient( to right, rgb(74, 26, 88), rgb(34, 11, 91) );
+  background: linear-gradient( to right, rgb(59, 26, 190), rgb(60, 11, 73) );
+  color: white;
 }
+  
 
 .text-info:hover {
   background: rgba(118, 150, 155, 0.18);
@@ -17,4 +20,9 @@
 
 .active {
   background: rgba(59, 70, 138, 0.35);
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
 }

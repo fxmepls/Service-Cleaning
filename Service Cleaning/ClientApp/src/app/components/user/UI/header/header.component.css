@@ -1,0 +1,22 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+  
+  
+.toolbar {
+    display: flex;
+    align-items: center;
+  
+    
+}
+.button {
+        margin-top: 10px;
+        margin-left: 20px;
+        color: white;
+        background-color: black;
+}
+  
+  .no-select {
+    cursor: pointer;
+    user-select: none;
+  }

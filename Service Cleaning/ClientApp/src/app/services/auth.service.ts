@@ -39,7 +39,7 @@ export class AuthService {
  * @param userinfo 
  */
   login(userinfo: {email: string, password: string}): Observable<string | boolean> {
-    if (userinfo.email === 'admin@gmail.com' && userinfo.password === 'admin123') {
+    if (userinfo.email === 'admin@gmail.com' && userinfo.password === 'Admin123') {
       this.setToken('aklnfioalnwfkinaffseflsjkkkkkfjebfjs')
       return of(true)
     }
