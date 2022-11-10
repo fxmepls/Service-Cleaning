@@ -18,11 +18,14 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { ProductResolver } from './services/product.resolver';
+import {MatDialogModule} from '@angular/material/dialog';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 const routes: Routes = [
   {path: '', component: BaseComponent},
   {path: 'products', component: ProductsComponent},
-  {path: 'products/:id', component: ProductsDetailsComponent},
+  {path: 'products/:id', component: ProductsDetailsComponent, resolve: {data: ProductResolver}},
   {path: 'basket', component: BasketComponent},
 
 
@@ -44,7 +47,9 @@ const routes: Routes = [
     AppComponent,
     LoginComponent,
     NotFoundComponent, 
-    HeaderComponent
+    HeaderComponent,
+    ProductsComponent, 
+    ProductsDetailsComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -56,7 +61,9 @@ const routes: Routes = [
     MatButtonModule,
     MatCardModule,
     MatIconModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatDialogModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

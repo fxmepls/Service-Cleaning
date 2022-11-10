@@ -1,0 +1,21 @@
+<div class="container">
+    <mat-toolbar *ngIf="canEdit">
+        <mat-toolbar-row>
+        <span class="example-spacer"></span>
+        <button mat-flat-button color="ptimary" (click)="openDialog()">Добавить товар</button>
+        </mat-toolbar-row>
+      </mat-toolbar>
+    <mat-card class="example-card" *ngFor="let product of products">
+        <mat-card-title>{{product.title}}</mat-card-title>
+        <img class="image" mat-card-image src="{{product.image}}" />
+        <mat-card-content>
+            <p>Цена: {{product.price}}р.</p>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-flat-button color="ptimary">В корзину</button>
+            <button mat-flat-button color="ptimary" [routerLink]="['/products', product.id]">Подробнее</button>
+
+        </mat-card-actions>
+    </mat-card>
+    
+</div>

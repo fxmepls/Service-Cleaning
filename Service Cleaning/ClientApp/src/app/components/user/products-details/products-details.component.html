@@ -1,1 +1,17 @@
-<p>products-details works!</p>
+<div class="container">
+    <mat-card class="example-card">
+        <mat-card-title>{{product.title}}</mat-card-title>
+        <img class="image" mat-card-image src="{{product.image}}" />
+        <mat-card-content>
+            <p>Цена: {{product.price}}р.</p>
+            <p>Тип: {{product.configure.type}}</p>
+            <p>Количество человек для уборки: {{product.configure.people}}</p>
+            <p>Время исполения: {{product.configure.time}}</p>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-flat-button color="ptimary" [routerLink]="['/products']">Назад</button>
+            <button mat-flat-button color="ptimary">В корзину</button>
+        </mat-card-actions>
+    </mat-card>
+    
+</div>
