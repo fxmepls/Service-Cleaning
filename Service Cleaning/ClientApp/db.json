@@ -1,37 +1,38 @@
 {
-    "products": [
-        {
-            "id": 1,
-            "title": "Влажная уборка",
-            "price": 999,
-            "image": "assets/images/flowers.jpg",
-            "configure": {
-                "type": "wet",
-                "people": 3,
-                "time": "3 hour"
-            }
-        },
-        {
-            "id": 2,
-            "title": "Уборка",
-            "price": 300,
-            "image": "assets/images/flowers.jpg",
-            "configure": {
-                "type": "no wet",
-                "people": 3,
-                "time": "3 hour"
-            }
-        },
-        {
-            "id": 3,
-            "title": "Сухая уборка",
-            "price": 999,
-            "image": "assets/images/flowers.jpg",
-            "configure": {
-                "type": "wet",
-                "people": 3,
-                "time": "3 hour"
-            }
-        }
-    ]
+  "products": [
+    {
+      "id": 1,
+      "title": "Влажная уборка",
+      "price": 999,
+      "image": "assets/images/flowers.jpg",
+      "configure": {
+        "type": "wet",
+        "people": 3,
+        "time": "3 hour"
+      }
+    },
+    {
+      "id": 2,
+      "title": "Уборка",
+      "price": 300,
+      "image": "assets/images/flowers.jpg",
+      "configure": {
+        "type": "no wet",
+        "people": 3,
+        "time": "3 hour"
+      }
+    },
+    {
+      "id": 3,
+      "title": "Сухая уборкаdgdfg",
+      "price": 999,
+      "image": "assets/images/flowers.jpg",
+      "configure": {
+        "type": "",
+        "people": "",
+        "time": ""
+      }
+    }
+  ],
+  "basket": []
 }

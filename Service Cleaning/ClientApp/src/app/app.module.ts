@@ -9,18 +9,26 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LoginComponent } from './components/login/login.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { AuthGuard } from './guards/auth.guard';
+
+
 import { HeaderComponent } from './components/user/UI/header/header.component';
 import { BaseComponent } from './components/user/base/base.component';
 import { ProductsComponent } from './components/user/products/products.component';
 import { ProductsDetailsComponent } from './components/user/products-details/products-details.component';
 import { BasketComponent } from './components/user/basket/basket.component';
+import { ProductResolver } from './services/product.resolver';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { ProductResolver } from './services/product.resolver';
 import {MatDialogModule} from '@angular/material/dialog';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatInputModule} from '@angular/material/input';
+import { MatFormField, MatFormFieldModule } from '@angular/material/form-field';
+import { DialogBoxComponent } from './components/user/dialog-box/dialog-box.component';
+import {MatMenu, MatMenuModule} from '@angular/material/menu';
+
 
 const routes: Routes = [
   {path: '', component: BaseComponent},
@@ -42,28 +50,41 @@ const routes: Routes = [
   {path: '**', component: NotFoundComponent},
 ];
 
+const modules = [
+  FormsModule,
+  ReactiveFormsModule,
+  MatButtonModule,
+  MatCardModule,
+  MatIconModule,
+  MatToolbarModule,
+  MatDialogModule,
+  BrowserAnimationsModule, 
+  MatInputModule, 
+  MatFormFieldModule, 
+  MatMenuModule
+]
+
+
 @NgModule({
   declarations: [
     AppComponent,
+
     LoginComponent,
     NotFoundComponent, 
+
     HeaderComponent,
     ProductsComponent, 
-    ProductsDetailsComponent
+    ProductsDetailsComponent, 
+    BaseComponent,
+    BasketComponent,
+    DialogBoxComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     HttpClientModule,
-    FormsModule,
-    ReactiveFormsModule,
     RouterModule.forRoot(routes),
     NgbModule,
-    MatButtonModule,
-    MatCardModule,
-    MatIconModule,
-    MatToolbarModule,
-    MatDialogModule,
-    BrowserAnimationsModule
+    [modules]
   ],
   providers: [],
   bootstrap: [AppComponent]

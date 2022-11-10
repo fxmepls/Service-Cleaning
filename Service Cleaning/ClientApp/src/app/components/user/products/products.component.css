@@ -10,14 +10,15 @@
   background-color: rgb(255, 255, 255);
   color: black;
   margin-right: 10px;
+  margin-top: 15px;
 }
 
 button {
-  margin-right:20px;
+  margin-right: 5px;
 }
 
 .image {
-  max-width: 300px;
+  max-width: 350px;
 }
 
 .example-spacer {

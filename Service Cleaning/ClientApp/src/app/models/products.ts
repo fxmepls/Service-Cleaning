@@ -3,7 +3,8 @@ export interface IProducts {
     title: string,
     price: number,
     image?: string,
-    configure: IProductsConfig
+    configure: IProductsConfig,
+    quantity: number
 }
 
 export interface IProductsConfig {

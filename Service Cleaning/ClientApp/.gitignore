@@ -6,9 +6,11 @@
 /tmp
 /out-tsc
 
+/.angular
+/node_modules
+
 # dependencies
 /node_modules
-.angular
 # IDEs and editors
 /.idea
 .project

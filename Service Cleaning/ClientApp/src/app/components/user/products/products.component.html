@@ -12,10 +12,15 @@
             <p>Цена: {{product.price}}р.</p>
         </mat-card-content>
         <mat-card-actions>
-            <button mat-flat-button color="ptimary">В корзину</button>
+            <button mat-flat-button color="ptimary" (click)="addToBasket(product)" type="button">В корзину</button>
             <button mat-flat-button color="ptimary" [routerLink]="['/products', product.id]">Подробнее</button>
-
+            <button mat-flat-button color="ptimary" mat-button [matMenuTriggerFor]="menu">Ред.</button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item (click)="openDialog(product)">Ред.</button>
+                <button mat-menu-item (click)="deleteItem(product.id)">Удалить</button>
+               </mat-menu>
         </mat-card-actions>
+        
     </mat-card>
     
 </div>

@@ -1,2 +1,31 @@
-<p>dialog-box works!</p>
-{{data}}
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()" class="example-form">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Название</mat-label>
+      <input matInput formControlName="title">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Цена</mat-label>
+      <input matInput formControlName="price">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Тип</mat-label>
+      <input matInput formControlName="type">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Количество человек</mat-label>
+      <input matInput formControlName="people">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Время уборки</mat-label>
+      <input matInput formControlName="time">
+    </mat-form-field>
+
+    <button mat-flat-button color="ptimary" type="submit">{{isNew ? 'Добавить товар' : 'Обновить'}}</button>
+    <button mat-flat-button color="ptimary" (click)="onNoClick()" type="button">Отмена</button>
+
+
+  </form>
